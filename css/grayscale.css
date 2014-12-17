@@ -232,7 +232,7 @@ a:focus {
   }
 }
 .content-section {
-  padding-top: 20px;
+  padding-top: 80px;
 }
 .speakers-section {
   width: 100%;
@@ -268,7 +268,7 @@ a:focus {
 }
 @media (min-width: 767px) {
   .content-section {
-    padding-top: 50px;
+    padding-top: 200px;
   }
   #map {
     height: 400px;
