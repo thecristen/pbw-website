@@ -26,6 +26,22 @@ p {
   font-size: 18px;
   line-height: 1.5;
 }
+h2.headline {
+  font-size: 30px;
+  font-style: italic;
+}
+dl {
+  font-size: 18px;
+}
+dl ul,
+dl li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+dl dt {
+  margin-top: 20px;
+}
 @media (min-width: 767px) {
   p {
     margin: 0 0 35px;
@@ -46,6 +62,16 @@ a:focus {
 }
 .light {
   font-weight: 400;
+}
+.program {
+  float: right;
+  width: 60%;
+}
+.schedule {
+  float: left;
+  width: 35%;
+  background: #8a8b8c;
+  color: #c2c0bf;
 }
 .navbar-custom {
   margin-bottom: 0;
@@ -124,7 +150,7 @@ a:focus {
   vertical-align: middle;
 }
 .intro .intro-body .brand-heading {
-  font-size: 40px;
+  font-size: 30px;
 }
 .intro .intro-body .intro-text {
   font-size: 18px;
@@ -135,10 +161,10 @@ a:focus {
     padding: 0;
   }
   .intro .intro-body .brand-heading {
-    font-size: 100px;
+    font-size: 40px;
   }
   .intro .intro-body .intro-text {
-    font-size: 25px;
+    font-size: 20px;
   }
 }
 .btn-circle {
@@ -206,7 +232,7 @@ a:focus {
   }
 }
 .content-section {
-  padding-top: 100px;
+  padding-top: 20px;
 }
 .speakers-section {
   width: 100%;
@@ -232,6 +258,7 @@ a:focus {
   color: #a31f34;
 }
 .speakers-section .speaker > p {
+  display: none;
   font-size: 12px;
   text-align: left;
 }
@@ -241,10 +268,7 @@ a:focus {
 }
 @media (min-width: 767px) {
   .content-section {
-    padding-top: 250px;
-  }
-  .download-section {
-    padding: 100px 0;
+    padding-top: 50px;
   }
   #map {
     height: 400px;
