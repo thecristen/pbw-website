@@ -4,9 +4,9 @@
 body {
     width: 100%;
     height: 100%;
-    font-family: "Lora","Helvetica Neue",Helvetica,Arial,sans-serif;
-    color: @MITgrey;
-    background-color: @MITgreylight;
+    font-family: @text-font-two;
+    color: @text-color-two;
+    background-color: @bg-color-two;
 }
 
 html {
@@ -21,10 +21,12 @@ h4,
 h5,
 h6 {
     margin: 0 0 35px;
-    text-transform: uppercase;
-    font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
-    letter-spacing: 1px;
+    // text-transform: uppercase;
+    // font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: @titles-font-two;
+    color: @titles-color-two;
+    // font-weight: 700;
+    // letter-spacing: 1px;
 }
 
 p {
@@ -82,8 +84,8 @@ a {
 .schedule {
     float: left;
     width: 35%;
-    background: @MITgrey;
-    color: @MITgreylight;
+    background: @box-bg-two;
+    color: @box-text-two;
 
 }
 
@@ -160,7 +162,7 @@ a {
     padding: 100px 0;
     text-align: center;
     color: @MITgreylight;
-    background: url(../img/PBW_LOGO.png) no-repeat bottom center scroll;
+    // background: url(../img/PBW_LOGO.png) no-repeat bottom center scroll;
     background-color: @MITgrey;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -268,22 +270,22 @@ a {
     }
 }
 
-.content-section {
+section {
     padding-top: 80px;
 }
 
-.speakers-section {
+#speakers {
     width: 100%;
     padding: 50px 0;
     color: @MITgreylight;
     background-color: @MITgrey;
     & .speaker {
         background: @MITgreylight;
-        padding: 20px;
-        margin: 10px;
+        padding: 10px;
+        margin: 5px;
         color: @black;
         display: inline-block;
-        width: 300px;
+        width: 240px;
         & > h2 {
             font-size: 20px;
             color: @MITred;
@@ -307,7 +309,7 @@ a {
 }
 
 @media(min-width:767px) {
-    .content-section {
+    section {
         padding-top: 200px;
     }
 
