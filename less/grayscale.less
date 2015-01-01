@@ -284,8 +284,13 @@ section {
         margin: 5px;
         color: @black;
         display: inline-block;
-        width: 240px;
+        & > img {
+            // border-radius: 110px;
+            width: 200px;
+            height: 200px;
+        }
         & > h2 {
+            margin-top: 10px;
             font-size: 20px;
             color: @MITred;
         }
@@ -309,6 +314,11 @@ section {
 
 #sponsors img {
     margin: 20px;
+}
+
+#speakers img {
+    float: left;
+    margin-right: 10px;
 }
 
 @media(min-width:767px) {

@@ -231,9 +231,13 @@ section {
   margin: 5px;
   color: #0f0f0f;
   display: inline-block;
-  width: 240px;
+}
+#speakers .speaker > img {
+  width: 200px;
+  height: 200px;
 }
 #speakers .speaker > h2 {
+  margin-top: 10px;
   font-size: 20px;
   color: #a31f34;
 }
@@ -253,6 +257,10 @@ section {
 }
 #sponsors img {
   margin: 20px;
+}
+#speakers img {
+  float: left;
+  margin-right: 10px;
 }
 @media (min-width: 767px) {
   section {
