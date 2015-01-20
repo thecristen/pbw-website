@@ -275,33 +275,51 @@ section {
 }
 
 #speakers {
-    // width: 100%;
-    background: url(../img/black_paper.png);
+    text-align: center;
+
+    /* For modern browsers */
+    &:before, &:after {
+        content:"";
+        display:table;
+    }
+      
+    &:after {
+        clear:both;
+    }
+
     & .speaker {
-        background: @MITgreylight;
-        padding: 10px;
-        margin: 5px;
+        position: relative;
+        float: left;
+        width: 265px;
+        min-height: 400px;
+        margin: 9px;
         color: @black;
         display: inline-block;
+        border: 1px solid @white;
         & > img {
-            // border-radius: 110px;
-            width: 200px;
-            height: 200px;
+            width: 263px;
         }
         & > h2 {
-            margin-top: 10px;
-            font-size: 20px;
-            color: @MITred;
+            font-size: 28px;
+            padding: 10px 70px;
+            color: @black;
+            background-color: @white;
+            border-bottom: 1px solid @MITred;
+            margin-bottom: 15px;
         }
         & > h3 {
             font-size: 16px;
             font-weight: normal;
-            color: @MITred;
         }
-        & > p {
+        & > .bio > p {
             display: none;
             font-size: 12px;
             text-align: left;
+            padding: 15px;
+        }
+        &:hover {
+            margin: 9px;
+            border: 1px solid @MITgreylight;
         }
     }
 }
@@ -313,11 +331,6 @@ section {
 
 #sponsors img {
     margin: 20px;
-}
-
-#speakers img {
-    float: left;
-    margin-right: 10px;
 }
 
 .btn {
