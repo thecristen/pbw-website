@@ -2,8 +2,6 @@ body {
   width: 100%;
   height: 100%;
   font-family: Geneva, sans-serif;
-  color: #0f0f0f;
-  background-color: #f3f3f3;
 }
 html {
   width: 100%;
@@ -28,18 +26,6 @@ h2.headline {
   font-size: 30px;
   font-style: italic;
 }
-dl {
-  font-size: 18px;
-}
-dl ul,
-dl li {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-dl dt {
-  margin-top: 20px;
-}
 @media (min-width: 767px) {
   p {
     margin: 0 0 35px;
@@ -58,7 +44,73 @@ a:focus {
   text-decoration: none;
   color: #4d0f19;
 }
-.light {
+.scheme1 svg .person {
+  fill: #f3f3f3;
+}
+.scheme1 svg .nut {
+  fill: #a31f34;
+}
+.scheme1 h1,
+.scheme1 h2,
+.scheme1 h3,
+.scheme1 h4,
+.scheme1 h5,
+.scheme1 h6 {
+  color: #a31f34;
+}
+.scheme1 .light {
+  background-color: #a8a8a8;
+  color: #0f0f0f;
+}
+.scheme1 .dark {
+  background-color: #0f0f0f;
+  color: #f3f3f3;
+}
+.scheme2 svg .person {
+  fill: #0f0f0f;
+}
+.scheme2 svg .nut {
+  fill: #008dff;
+}
+.scheme2 h1,
+.scheme2 h2,
+.scheme2 h3,
+.scheme2 h4,
+.scheme2 h5,
+.scheme2 h6 {
+  color: #008dff;
+}
+.scheme2 .light {
+  background-color: #ffffff;
+  color: #0f0f0f;
+}
+.scheme2 .dark {
+  background-color: #919191;
+  color: #f3f3f3;
+}
+.scheme3 svg .person {
+  fill: #0f0f0f;
+}
+.scheme3 svg .nut {
+  fill: #df8400;
+}
+.scheme3 h1,
+.scheme3 h2,
+.scheme3 h3,
+.scheme3 h4,
+.scheme3 h5,
+.scheme3 h6 {
+  color: #df8400;
+}
+.scheme3 .light {
+  background-color: #ffffff;
+  color: #0f0f0f;
+}
+.scheme3 .dark {
+  background-color: #81ab44;
+  color: #f3f3f3;
+}
+span.light {
   font-weight: 400;
 }
 .program {
@@ -78,9 +130,6 @@ a:focus {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #8a8b8c;
 }
-.navbar-custom .navbar-brand {
-  font-weight: 700;
-}
 .navbar-custom .navbar-brand:focus {
   outline: none;
 }
@@ -92,9 +141,6 @@ a:focus {
 .navbar-custom .navbar-brand .navbar-toggle:focus,
 .navbar-custom .navbar-brand .navbar-toggle:active {
   outline: none;
-}
-.navbar-custom a {
-  color: #c2c0bf;
 }
 .navbar-custom .nav li.active {
   outline: nonte;
@@ -134,10 +180,7 @@ a:focus {
   width: 100%;
   height: auto;
   padding: 100px 0;
-  background: url(../img/concrete_wall.png);
   text-align: center;
-  color: #c2c0bf;
-  background-color: #8a8b8c;
 }
 .intro .intro-body {
   display: table-cell;
@@ -237,7 +280,6 @@ section {
   width: 265px;
   min-height: 400px;
   margin: 9px;
-  color: #0f0f0f;
   display: inline-block;
   border: 1px solid #f3f3f3;
 }
@@ -247,8 +289,6 @@ section {
 #speakers .speaker > h2 {
   font-size: 28px;
   padding: 10px 70px;
-  color: #0f0f0f;
-  background-color: #f3f3f3;
   border-bottom: 1px solid #a31f34;
   margin-bottom: 15px;
 }
@@ -265,9 +305,6 @@ section {
 #speakers .speaker:hover {
   margin: 9px;
   border: 1px solid #c2c0bf;
-}
-#contact {
-  background-color: #8a8b8c;
 }
 #sponsors img {
   margin: 20px;
@@ -334,4 +371,25 @@ img::-moz-selection {
 }
 body {
   webkit-tap-highlight-color: rgba(194, 192, 191, 0.2);
+}
+/*Switch*/
+label {
+  display: block;
+  background: #eee;
+  padding: 0 10px;
+  position: fixed;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 20px;
+  margin-top: 5px;
+}
+label:hover {
+  background: #ddca7e;
+  color: #000;
+  cursor: pointer;
+}
+input#switch {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
 }
