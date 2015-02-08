@@ -4,19 +4,6 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
-//change the color scheme
-$('input#switch').change(function() {
-    if ($('body').hasClass('scheme1')) {
-        $('body').removeClass('scheme1').addClass('scheme2');
-    }
-    else if ($('body').hasClass('scheme2')) {
-        $('body').removeClass('scheme2').addClass('scheme3');
-    }
-    else if ($('body').hasClass('scheme3')) {
-        $('body').removeClass('scheme3').addClass('scheme1');
-    }
-});
-
 // jQuery to collapse the navbar on scroll
 $(window).scroll(function() {
     if ($(".navbar").offset().top > 50) {

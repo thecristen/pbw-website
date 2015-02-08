@@ -88,68 +88,6 @@ a {
     }  
 }
 
-.scheme2 {
-    svg {
-        & .person {
-            fill: @black;
-        }
-        & .nut {
-            fill: @accent2;
-        }
-    }
-
-    & h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        color: @accent2;
-    }
-
-    & .light {
-        background-color: lighten(#919191, 60%);
-        color: @black;
-    }
-
-    & .dark {
-        background-color: #919191;
-        color: @white;
-    }  
-}
-
-.scheme3 {
-    svg {
-        & .person {
-            fill: @black;
-        }
-        & .nut {
-            fill: @accent3;
-        }
-    }
-
-    & h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        color: @accent3;
-    }
-
-    & .light {
-        background-color: lighten(#81ab44, 60%);
-        color: @black;
-    }
-
-    & .dark {
-        background-color: #81ab44;
-        color: @white;
-    }  
-}
-
-
-
 span.light {
     font-weight: 400;
 }
@@ -172,6 +110,9 @@ span.light {
     text-transform: uppercase;
     font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
     background-color: @MITgrey;
+    .navbar-header {
+        padding: 15px;
+    }
     .navbar-brand {
         &:focus {
             outline: none;
@@ -191,19 +132,25 @@ span.light {
             &.active {
                 outline: nonte;
                 background-color: fade(@MITgreylight, 30%);
+                text-shadow: none;
             }
             a {
                 -webkit-transition: background .3s ease-in-out;
                 -moz-transition: background .3s ease-in-out;
                 transition: background .3s ease-in-out;
+                text-shadow: 1px 1px 5px #000;
                 &:hover,
                 &:focus,
                 &.active {
                     outline: none;
                     background-color: fade(@MITgreylight, 30%);
+                    text-shadow: none;
                 }
             }
         }
+    }
+    &.top-nav-collapse .nav li a {
+        text-shadow: none;
     }
 }
 
@@ -221,6 +168,7 @@ span.light {
     .top-nav-collapse {
         padding: 0;
         background-color: @MITgrey;
+        text-shadow: none;
     }
 
     .navbar-custom.top-nav-collapse {
@@ -228,21 +176,41 @@ span.light {
     }
 }
 
+
 .intro {
-    display: table;
+    background: url(../img/killian.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
     height: auto;
-    padding: 100px 0;
     text-align: center;
-    // color: @MITgreylight;
+    
     .intro-body {
-        display: table-cell;
-        vertical-align: middle;
+
+        padding-top: 180px;
+        padding-bottom: 160px;
+        background-color: rgba(0,0,0,0.5);
+        background: -moz-linear-gradient(top,  rgba(0,0,0,0.5) 0%, rgba(168,168,168,1) 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.5)), color-stop(100%,rgba(168,168,168,1))); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  rgba(0,0,0,0.5) 0%,rgba(168,168,168,1) 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  rgba(0,0,0,0.5) 0%,rgba(168,168,168,1) 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  rgba(0,0,0,0.5) 0%,rgba(168,168,168,1) 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  rgba(0,0,0,0.5) 0%,rgba(168,168,168,1) 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80000000', endColorstr='#a8a8a8',GradientType=0 ); /* IE6-9 */
+
+        h1, h2 {
+            color: @MITred;
+            text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.9), 0px 2px 0px rgba(27, 27, 27, 0.85);
+        }
+        h1 {
+            font-size: 46px;
+        }
         .intro-text {
-            font-size: 18px;
+            font-size: 24px;
         }
     }
 }
+
 .brand-heading {
     font-size: 30px;
     text-transform: uppercase;
@@ -377,9 +345,13 @@ section {
     }
 }
 
+.keynote {
+    margin-bottom: 50px;
+}
 
 #sponsors img {
     margin: 20px;
+    height: 50px;
 }
 
 .btn {
@@ -457,5 +429,3 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: fade(@MITgreylight, 20%);
 }
-
-@import "switch.less";
