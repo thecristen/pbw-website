@@ -93,15 +93,35 @@ span.light {
 }
 
 .program {
-    float: right;
-    width: 60%;
+    // float: right;
+    // width: 60%;
+    margin: 0 90px;
+    p {
+        font-size: 20px;
+    }
+    & ul { list-style-type: none; }
+    & li {
+        strong {
+            color: @MITred;
+        }
+        font-size: 16px;
+        list-style-type: none;
+        margin-bottom: 20px;
+    }
 }
 
 .schedule {
-    float: left;
-    width: 35%;
+    // float: left;
+    // width: 35%;
+    padding: 20px;
+    margin: 0 180px;
     background: @box-bg-two;
     color: @box-text-two;
+    & dt {
+        color: @MITred;
+        padding: 10px 0;
+        font-weight: 700;
+    }
 }
 
 .navbar-custom {
@@ -345,8 +365,17 @@ section {
     }
 }
 
-.keynote {
+img.keynote {
     margin-bottom: 50px;
+}
+
+p.keynote {
+    margin: 0 130px;
+    & span {
+        font-weight: 700;
+        color: @MITred;
+        font-size: 20px;
+    }
 }
 
 #sponsors img {

@@ -70,14 +70,32 @@ span.light {
   font-weight: 400;
 }
 .program {
-  float: right;
-  width: 60%;
+  margin: 0 90px;
+}
+.program p {
+  font-size: 20px;
+}
+.program ul {
+  list-style-type: none;
+}
+.program li {
+  font-size: 16px;
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+.program li strong {
+  color: #a31f34;
 }
 .schedule {
-  float: left;
-  width: 35%;
+  padding: 20px;
+  margin: 0 180px;
   background: #c2c0bf;
   color: #f3f3f3;
+}
+.schedule dt {
+  color: #a31f34;
+  padding: 10px 0;
+  font-weight: 700;
 }
 .navbar-custom {
   margin-bottom: 0;
@@ -296,8 +314,16 @@ section {
   margin: 9px;
   border: 1px solid #c2c0bf;
 }
-.keynote {
+img.keynote {
   margin-bottom: 50px;
+}
+p.keynote {
+  margin: 0 130px;
+}
+p.keynote span {
+  font-weight: 700;
+  color: #a31f34;
+  font-size: 20px;
 }
 #sponsors img {
   margin: 20px;
