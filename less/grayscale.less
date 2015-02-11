@@ -59,15 +59,6 @@ a {
 }
 
 .scheme1 {
-    svg {
-        & .person {
-            fill: @white;
-        }
-        & .nut {
-            fill: @accent1;
-        }
-    }
-
     & h1,
     h2,
     h3,
@@ -78,13 +69,13 @@ a {
     }
 
     & .light {
-        background-color: lighten(@black, 60%);
-        color: @black;
+        background-color: @lightcolor;
+        color: @darkcolor;
     }
 
     & .dark {
-        background-color: @black;
-        color: @white;
+        background-color: @darkcolor;
+        color: @lightcolor;
     }  
 }
 
@@ -93,43 +84,51 @@ span.light {
 }
 
 .program {
-    // float: right;
-    // width: 60%;
     margin: 0 90px;
     p {
         font-size: 20px;
     }
+}
+
+.program2 {
+    float: left;
+    width: 50%;
     & ul { list-style-type: none; }
     & li {
         strong {
-            color: @MITred;
+            color: @accent1;
         }
-        font-size: 16px;
+        font-size: 18px;
         list-style-type: none;
-        margin-bottom: 20px;
+        margin-bottom: 22px;
     }
 }
 
 .schedule {
-    // float: left;
-    // width: 35%;
-    padding: 20px;
-    margin: 0 180px;
-    background: @box-bg-two;
-    color: @box-text-two;
+    width: 40%;
+    float: right;
+    padding: 30px 20px;
+    background: fadeout(@darkcolor, 60%);
+    color: @lightcolor;
     & dt {
-        color: @MITred;
+        color: @accent1;
         padding: 10px 0;
         font-weight: 700;
     }
 }
+#about {
+    padding-bottom: 0;
+}
+#location {
+    padding: 0;
+}
 
 .navbar-custom {
     margin-bottom: 0;
-    border-bottom: 1px solid fade(@MITgreylight, 30%);
+    border-bottom: 1px solid fade(@lightcolor, 30%);
     text-transform: uppercase;
     font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
-    background-color: @MITgrey;
+    background-color: @lightcolor;
     .navbar-header {
         padding: 15px;
     }
@@ -140,7 +139,7 @@ span.light {
         .navbar-toggle {
             padding: 4px 6px;
             font-size: 16px;
-            color: @MITgreylight;
+            color: @lightcolor;
             &:focus,
             &:active {
                 outline: none;
@@ -151,19 +150,19 @@ span.light {
         li {
             &.active {
                 outline: nonte;
-                background-color: fade(@MITgreylight, 30%);
+                background-color: fade(@lightcolor, 30%);
                 text-shadow: none;
             }
             a {
                 -webkit-transition: background .3s ease-in-out;
                 -moz-transition: background .3s ease-in-out;
                 transition: background .3s ease-in-out;
-                text-shadow: 1px 1px 5px #000;
+                text-shadow: 1px 1px 5px @darkcolor;
                 &:hover,
                 &:focus,
                 &.active {
                     outline: none;
-                    background-color: fade(@MITgreylight, 30%);
+                    background-color: fade(@lightcolor, 30%);
                     text-shadow: none;
                 }
             }
@@ -192,10 +191,14 @@ span.light {
     }
 
     .navbar-custom.top-nav-collapse {
-        border-bottom: 1px solid fade(@MITgreylight, 30%);
+        border-bottom: 1px solid fade(@lightcolor, 30%);
     }
 }
 
+#map {
+    width: 100%;
+    height: 400px;
+}
 
 .intro {
     background: url(../img/killian.jpg);
@@ -206,16 +209,15 @@ span.light {
     text-align: center;
     
     .intro-body {
-
         padding-top: 180px;
         padding-bottom: 160px;
-        background-color: rgba(0,0,0,0.5);
-        background: -moz-linear-gradient(top,  rgba(0,0,0,0.5) 0%, rgba(168,168,168,1) 100%); /* FF3.6+ */
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.5)), color-stop(100%,rgba(168,168,168,1))); /* Chrome,Safari4+ */
-        background: -webkit-linear-gradient(top,  rgba(0,0,0,0.5) 0%,rgba(168,168,168,1) 100%); /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(top,  rgba(0,0,0,0.5) 0%,rgba(168,168,168,1) 100%); /* Opera 11.10+ */
-        background: -ms-linear-gradient(top,  rgba(0,0,0,0.5) 0%,rgba(168,168,168,1) 100%); /* IE10+ */
-        background: linear-gradient(to bottom,  rgba(0,0,0,0.5) 0%,rgba(168,168,168,1) 100%); /* W3C */
+        background-color: fadeout(@darkcolor, 50%);
+        background: -moz-linear-gradient(top, fadeout(@darkcolor, 50%) 0%, @lightcolor 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, fadeout(@darkcolor, 50%)), color-stop(100%, @lightcolor)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, fadeout(@darkcolor, 50%) 0%, @lightcolor 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, fadeout(@darkcolor, 50%) 0%, @lightcolor 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top, fadeout(@darkcolor, 50%) 0%, @lightcolor 100%); /* IE10+ */
+        background: linear-gradient(to bottom, fadeout(@darkcolor, 50%) 0%, @lightcolor 100%); /* W3C */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80000000', endColorstr='#a8a8a8',GradientType=0 ); /* IE6-9 */
 
         h1, h2 {
@@ -242,10 +244,10 @@ span.light {
     height: 70px;
     margin-top: 15px;
     padding: 7px 16px;
-    border: 2px solid @MITgreylight;
+    border: 2px solid @lightcolor;
     border-radius: 35px;
     font-size: 40px;
-    color: @MITgreylight;
+    color: @lightcolor;
     background: transparent;
     -webkit-transition: background .3s ease-in-out;
     -moz-transition: background .3s ease-in-out;
@@ -253,8 +255,8 @@ span.light {
     &:hover,
     &:focus {
         outline: none;
-        color: @MITgreylight;
-        background: fade(@MITgreylight, 10%);
+        color: @lightcolor;
+        background: fade(@lightcolor, 10%);
     }
     i.animated {
         -webkit-transition-property: -webkit-transform;
@@ -336,7 +338,7 @@ section {
         margin: 9px;
         // color: @black;
         display: inline-block;
-        border: 1px solid @white;
+        // border: 1px solid @white;
         & > img {
             width: 263px;
         }
@@ -345,7 +347,7 @@ section {
             padding: 10px 70px;
             // color: @black;
             // background-color: @white;
-            border-bottom: 1px solid @MITred;
+            border-bottom: 1px solid @accent1;
             margin-bottom: 15px;
         }
         & > h3 {
@@ -360,7 +362,7 @@ section {
         }
         &:hover {
             margin: 9px;
-            border: 1px solid @MITgreylight;
+            border: 1px solid @lightcolor;
         }
     }
 }
@@ -373,14 +375,14 @@ p.keynote {
     margin: 0 130px;
     & span {
         font-weight: 700;
-        color: @MITred;
+        color: @accent1;
         font-size: 20px;
     }
 }
 
 #sponsors img {
     margin: 20px;
-    height: 50px;
+    height: 80px;
 }
 
 .btn {
@@ -393,15 +395,14 @@ p.keynote {
 }
 
 .btn-default {
-    border: 1px solid @MITred;
-    color: @MITred;
+    border: 1px solid @accent1;
+    color: @accent1;
     background-color: transparent;
     &:hover,
     &:focus {
-        border: 1px solid @MITred;
         outline: none;
-        color: @MITgrey;
-        background-color: @MITred;
+        color: @lightcolor;
+        background-color: @accent1;
     }
 }
 
@@ -438,13 +439,13 @@ footer {
 ::-moz-selection {
     text-shadow: none;
     background: #fcfcfc;
-    background: fade(@MITgreylight, 20%);
+    background: fade(@lightcolor, 20%);
 }
 
 ::selection {
     text-shadow: none;
     background: #fcfcfc;
-    background: fade(@MITgreylight, 20%);
+    background: fade(@lightcolor, 20%);
 }
 
 img::selection {
@@ -456,5 +457,5 @@ img::-moz-selection {
 }
 
 body {
-    webkit-tap-highlight-color: fade(@MITgreylight, 20%);
+    webkit-tap-highlight-color: fade(@lightcolor, 20%);
 }
